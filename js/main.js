@@ -26,8 +26,12 @@ do {
             alert('No se cargaron edades de alumnos');
         }
     } else if (esNumero(edad)) {
-        cantidadAlumnos++;
-        sumaEdades += parseFloat(edad);
+        if(parseFloat(edad) > 0) {
+            cantidadAlumnos++;
+            sumaEdades += parseFloat(edad);
+        } else {
+            alert('La edad no puede ser 0 o menor');
+        }
     } else {
         alert('La edad ingresada no es válida');
     }
